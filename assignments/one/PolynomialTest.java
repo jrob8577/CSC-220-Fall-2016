@@ -7,7 +7,7 @@ public class PolynomialTest {
 
       Polynomial q = new Polynomial( 2 );
       q.setTerm( 2, 0 );
-      q.setTerm( 1, 1 );
+      q.setTerm( 0, 1 );
       q.setTerm( 3, 2 );
       System.out.println( q );
       System.out.println( q.evaluate( 3 ) );
