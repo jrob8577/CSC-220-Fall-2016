@@ -1,18 +1,25 @@
-String fileName = "data.txt";
-Scanner fromFile = null;
+public class Circle extends GraphicObject implements Comparable<Circle> {
+  private double radius;
 
-System.out.println( "The file " + fileName + " contains the following lines:" );
+  public int compareTo( Circle other ) {
+    int result;
 
-try {
-  fromFile = new Scanner( new File( fileName ));
-} catch( FileNotFoundException e ) {
-  System.out.println( "Error opening the file " + fileName );
-  System.exit( 0 );
+    if( this.equals( other ) ) {
+      result = 0;
+    } else if( radius < other.radius ) {
+      result = -1;
+    } else {
+      result = 1;
+    }
+
+    return result;
+  }
+
+  void draw() {
+    // Implementation
+  }
+
+  void resize() {
+    // Implementation
+  }
 }
-
-while( fromFile.hasNextLine() ) {
-  String line = fromFile.nextLine();
-  System.out.println( line );
-}
-
-fromFile.close()
