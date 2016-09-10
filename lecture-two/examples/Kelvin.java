@@ -11,11 +11,18 @@ public class Kelvin {
     this.temperature = temp;
   }
 
-  public static void main( String[] args ) throws BadTemperature {
+  public static void main( String[] args ) {
     Kelvin kelvin = new Kelvin();
 
-    kelvin.setTemparature( 50 );
-    kelvin.setTemparature( - 1 );
+    try {
+      kelvin.setTemparature( 50 );
+      kelvin.setTemparature( - 1 );
+    } catch( BadTemperature badTempExc ) {
+      System.out.println( badTempExc.getMessage() );
+      badTempExc.printStackTrace();
+    } finally {
+      System.out.println( "We're done!" );
+    }
   }
 }
 
