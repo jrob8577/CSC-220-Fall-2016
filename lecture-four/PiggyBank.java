@@ -8,7 +8,7 @@ public class PiggyBank
 
   public PiggyBank()
   {
-    coins = new Bag< Coin >();
+    coins = new ArrayBag< Coin >();
   } // end default constructor
 
 
