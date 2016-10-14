@@ -1,10 +1,10 @@
 public class BalanceChecker {
   public static boolean checkBalance( String expression ) {
-    StackInterface<Character> openDelimiterStack = new LinkedStack<Character>();
+    StackInterface<Character> openDelimiterStack = new ArrayStack<Character>();
 
     int characterCount = expression.length();
     boolean isBalanced = true;
-    char nextCharacter = '';
+    char nextCharacter = ' ';
 
     for( int index = 0; isBalanced && ( index < characterCount ); index++ ) {
       nextCharacter = expression.charAt( index );
@@ -38,16 +38,16 @@ public class BalanceChecker {
   private static boolean isPaired( char open, char close ) {
     return ( open == '(' && close == ')' ) ||
       ( open == '[' && close == ']' ) ||
-      ( open == '{' && close == '}' )
+      ( open == '{' && close == '}' );
   }
 
   public static void main( String[] args ) {
     String expression = "a {b [c (d + e)/2 - f] + 1}";
 
     if( checkBalance( expression ) ) {
-      System.out.println( expession + " is balanced." );
+      System.out.println( expression + " is balanced." );
     } else {
-      System.out.println( expession + " is not balanced." );
+      System.out.println( expression + " is not balanced." );
     }
   }
 }
