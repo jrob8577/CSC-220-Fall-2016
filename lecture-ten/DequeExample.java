@@ -1,5 +1,5 @@
 
-public class DequeInterfaceExample {
+public class DequeExample {
   public static void main( String[] args ) {
     DequeInterface<String> myDeque = new LinkedDeque<String>();
 
