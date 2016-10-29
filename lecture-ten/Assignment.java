@@ -15,7 +15,7 @@ public class Assignment implements Comparable {
   public int compareTo( Object other ) {
     // Note that this is not the recommended approach to implementing
     // compareTo, but I was in a hurry :)
-    return - this.dueDate.compareTo( ((Assignment) other).dueDate );
+    return this.dueDate.compareTo( ((Assignment) other).dueDate );
   }
 
   public String toString() {
