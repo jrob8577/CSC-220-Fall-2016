@@ -16,6 +16,7 @@ public class LinkedDeque< T > implements DequeInterface< T > {
       this.lastNode = node;
     } else {
       this.firstNode.setPrevious( node );
+      node.setNext( this.firstNode );
     }
 
     this.firstNode = node;
