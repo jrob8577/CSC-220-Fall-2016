@@ -44,6 +44,21 @@ public class LList< T > implements ListInterface< T > {
 
   }
 
+  public String toString() {
+    StringBuffer buffer = new StringBuffer();
+    buffer.append( "--> " );
+
+    Node walker = firstNode;
+    while( walker != null ) {
+      buffer.append( walker.data + " --> " );
+
+      walker = walker.next;
+    }
+
+    buffer.append( "null" );
+    return buffer.toString();
+  }
+
   private class Node {
     public T data;
     public Node next;
