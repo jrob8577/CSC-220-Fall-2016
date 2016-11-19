@@ -7,6 +7,10 @@ public class LList< T > implements ListInterface< T > {
     clear();
   }
 
+  public boolean add( T entry ) {
+    
+  }
+  
   public boolean add( int newPosition, T newEntry ) {
 
   }
